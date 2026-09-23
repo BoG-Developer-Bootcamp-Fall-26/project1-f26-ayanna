@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bits of Good Mid-Semester Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            appBorder: '#374151',
+            panelBg: '#E5E7EB',
+            btnGray: '#E5E7EB',
+            activeGreen: '#86EFAC',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+  <main class="w-full max-w-[850px] border-4 border-black bg-white p-8 md:p-12 shadow-sm">
+    
+    <h1 class="text-3xl md:text-4xl font-extrabold text-center text-black mb-6">
+      Bits of Good Mid-Semester Project
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      
+      <section class="flex flex-col items-center">
+        <div class="w-64 h-64 border-2 border-black flex items-center justify-center bg-white">
+          <img id="pokemon-img" src="" alt="Pokémon Sprite" class="w-48 h-48 object-contain hidden" />
+          <div id="img-placeholder" class="text-gray-400 text-sm">Loading...</div>
+        </div>
+
+        <div class="w-64 mt-4 bg-[#E5E7EB] border border-gray-400 rounded-md py-1.5 text-center text-black text-lg font-medium tracking-wide">
+          <span id="pokemon-name">...</span>
+        </div>
+
+        <div class="w-64 mt-4 text-left">
+          <p class="text-xs font-bold text-black mb-1">Types:</p>
+          <div id="types-container" class="flex flex-wrap gap-2">
+          </div>
+        </div>
+
+        <div class="w-64 mt-6 flex justify-between gap-4">
+          <button id="prev-btn" class="flex-1 bg-[#E5E7EB] hover:bg-gray-300 py-2 rounded-lg text-lg font-bold flex items-center justify-center transition">
+            &lt;
+          </button>
+          <button id="next-btn" class="flex-1 bg-[#E5E7EB] hover:bg-gray-300 py-2 rounded-lg text-lg font-bold flex items-center justify-center transition">
+            &gt;
+          </button>
+        </div>
+      </section>
+
+      <section class="flex flex-col items-center">
+        <h2 id="panel-title" class="text-xl font-bold text-black mb-3">Info</h2>
+
+        <div id="content-panel" class="w-72 h-80 bg-[#E5E7EB] p-5 rounded overflow-y-auto text-black text-base font-normal space-y-1">
+        </div>
+
+        <div class="w-72 mt-6 flex justify-between gap-4">
+          <button id="info-tab-btn" class="flex-1 py-2 rounded-lg text-base font-medium transition bg-[#86EFAC] text-black">
+            Info
+          </button>
+          <button id="moves-tab-btn" class="flex-1 py-2 rounded-lg text-base font-medium transition bg-[#E5E7EB] text-black hover:bg-gray-300">
+            Moves
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
